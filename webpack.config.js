@@ -8,6 +8,11 @@ module.exports = {
     module: { 
         rules: [
             {
+                test: /\.js$/,
+                enforce: 'pre',
+                use: ['source-map-loader'],
+            },
+            {
                 test:/\.css$/i,
                 exclude: /styles\.css$/,
                 use: [
